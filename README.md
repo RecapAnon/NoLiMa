@@ -30,6 +30,7 @@ This repository contains the code and data associated with our ICML 2025 paper, 
 | GPT-4.1 Nano 🆕     | 1M            | <1K             | 80.7 (68.6)             | 60.8 | 48.2 | *36.7* | *28.8* | *19.5* | *9.4* | -- | -- |
 | Llama 3.1 8B        | 128K          | 1K              | 76.7 (65.2)             | <ins>65.7</ins> | 54.4 | 44.1 | *31.9* | *22.6* | *14.2* | -- | -- |
 | Gemma 3 4B 🆕       | 128K          | <1K              | 73.6 (62.6)             | 50.3 | *35.3* | *16.4* | *7.5* | *2.3* | *0.9* | -- | -- |
+| Gemma 4 31B F16 🆕  | 256K          | 4K              | 79.0 (67.2)             | <ins>77.9</ins> | <ins>74.3</ins> | <ins>68.9</ins> | 61.4 | -- | -- | -- | -- |
 
 This table presents the performance results of selected models on NOLIMA tests. The **base score** represents a model’s accuracy on the task at short contexts (250, 500, and 1K) and serves as a controlled reference to measure performance degradation at longer contexts. 
 The **effective length** is defined as the longest context where a model maintains at least 85% of its base score. Scores above this threshold are <ins>underlined</ins>, while scores dropping below 50% of the base score are *italicized*.
