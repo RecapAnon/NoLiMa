@@ -31,6 +31,7 @@ This repository contains the code and data associated with our ICML 2025 paper, 
 | Llama 3.1 8B        | 128K          | 1K              | 76.7 (65.2)             | <ins>65.7</ins> | 54.4 | 44.1 | *31.9* | *22.6* | *14.2* | -- | -- |
 | Gemma 3 4B 🆕       | 128K          | <1K              | 73.6 (62.6)             | 50.3 | *35.3* | *16.4* | *7.5* | *2.3* | *0.9* | -- | -- |
 | Gemma 4 31B F16 🆕  | 256K          | 4K              | 79.0 (67.2)             | <ins>77.9</ins> | <ins>74.3</ins> | <ins>68.9</ins> | 61.4 | -- | -- | -- | -- |
+| Qwen 3.6 27B BF16 🆕| 256K          | 2K              | 86.1 (73.2)             | <ins>78.1</ins> | <ins>75.9</ins> | 70.4 | 64.5 | 54.7 | *43.4* | -- | -- |
 
 This table presents the performance results of selected models on NOLIMA tests. The **base score** represents a model’s accuracy on the task at short contexts (250, 500, and 1K) and serves as a controlled reference to measure performance degradation at longer contexts. 
 The **effective length** is defined as the longest context where a model maintains at least 85% of its base score. Scores above this threshold are <ins>underlined</ins>, while scores dropping below 50% of the base score are *italicized*.
@@ -38,6 +39,8 @@ Longer context evaluations (64K and 128K) use a reduced number of placements (11
 
 #### ✨ Updates:
 
+- [2026-06-30]: Added evaluation results on Qwen 3.6 27B BF16.
+- [2026-06-15]: Added evaluation results on Gemma 4 31B F16.
 - [2025-07-17]: Added evaluation results on GPT-o3 and GPT-o4 Mini on NoLiMa-Hard in the reasoning models section.
 - [2025-06-09]: Added support for external API providers (e.g. Fireworks, OpenRouter, ...) Added evaluation results on GPT-4.1 series, Gemini 2.5 Flash (w/o Thinking), and Llama 4 Maverick. 
 Gemini 2.5 Pro and Gemini 2.5 Flash (w/ Thinking) results are included in the NoLiMa-Hard section. Added evaluation results up to 128K for GPT-4o, 4.1 and Gemini 2.0 Flash.
