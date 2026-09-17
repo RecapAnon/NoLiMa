@@ -8,7 +8,7 @@ This repository contains the code and data associated with our ICML 2025 paper, 
 ## Results
 | Models               | Claimed Length | Effective Length | Base Score<br>(×0.85: Thr.) | 1K  | 2K  | 4K  | 8K  | 16K | 32K | 64K* | 128K* |
 |----------------------|:-------------:|:---------------:|:-----------------------:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| GPT-4.1 🆕          | 1M            | 16K              | 97.0 (82.5)             | <ins>95.6</ins> | <ins>95.2</ins> | <ins>91.7</ins> | <ins>87.5</ins> | <ins>84.9</ins> | 79.8 | 69.7 | 64.7 |
+| GPT-4.1ccc          | 1M            | 16K              | 97.0 (82.5)             | <ins>95.6</ins> | <ins>95.2</ins> | <ins>91.7</ins> | <ins>87.5</ins> | <ins>84.9</ins> | 79.8 | 69.7 | 64.7 |
 | GPT-4o              | 128K          | 8K              | 99.3 (84.4)             | <ins>98.1</ins> | <ins>98.0</ins> | <ins>95.7</ins> | <ins>89.2</ins> | 81.6 | 69.7 | 62.4 | 56.0 |
 | Llama 3.3 70B       | 128K          | 2K              | 97.3 (82.7)             | <ins>94.2</ins> | <ins>87.4</ins> | 81.5 | 72.1 | 59.5 | *42.7* | -- | -- |
 | Llama 3.1 405B      | 128K          | 2K              | 94.7 (80.5)             | <ins>89.0</ins> | <ins>85.0</ins> | 74.5 | 60.1 | 48.4 | *38.0* | -- | -- |
@@ -16,22 +16,23 @@ This repository contains the code and data associated with our ICML 2025 paper, 
 | Gemini 1.5 Pro      | 2M            | 2K              | 92.6 (78.7)             | <ins>86.4</ins> | <ins>82.7</ins> | 75.4 | 63.9 | 55.5 | 48.2 | -- | -- |
 | Jamba 1.5 Mini      | 256K          | <1K             | 92.4 (78.6)             | 76.3 | 74.1 | 70.8 | 62.2 | 52.7 | *43.6* | -- | -- |
 | Command R+          | 128K          | <1K             | 90.9 (77.3)             | 77.0 | 73.5 | 66.3 | *39.5* | *21.3* | *7.4* | -- | -- |
-| Llama 4 Maverick 🆕 | 1M            | 2K             | 90.1 (76.6)             | <ins>81.6</ins>  | <ins>78.3</ins> | 68.8 | 49.0 | *34.3* | *24.5* | -- | -- |
-| Gemini 2.5 Flash (w/o T) 🆕 | 1M            | 2K             | 94.4 (80.2)             | <ins>90.1</ins> | <ins>86.1</ins> | 79.4 | 68.2 | 57.9 | 48.4 | -- | -- |
-| Gemini 2.0 Flash 🆕 | 1M            | 4K             | 89.4 (76.0)             | <ins>87.7</ins> | <ins>87.5</ins> | <ins>77.9</ins> | 64.7 | 48.2 | *41.0* | *33.0* | *16.4* |
-| Gemma 3 27B 🆕      | 128K          | <1K             | 88.6 (75.3)             | 73.3 | 65.6 | 48.1 | *32.7* | *20.2* | *9.5* | -- | -- |
+| Llama 4 Maverick    | 1M            | 2K             | 90.1 (76.6)             | <ins>81.6</ins>  | <ins>78.3</ins> | 68.8 | 49.0 | *34.3* | *24.5* | -- | -- |
+| Gemini 2.5 Flash (w/o T) | 1M            | 2K             | 94.4 (80.2)             | <ins>90.1</ins> | <ins>86.1</ins> | 79.4 | 68.2 | 57.9 | 48.4 | -- | -- |
+| Gemini 2.0 Flash    | 1M            | 4K             | 89.4 (76.0)             | <ins>87.7</ins> | <ins>87.5</ins> | <ins>77.9</ins> | 64.7 | 48.2 | *41.0* | *33.0* | *16.4* |
+| Gemma 3 27B         | 128K          | <1K             | 88.6 (75.3)             | 73.3 | 65.6 | 48.1 | *32.7* | *20.2* | *9.5* | -- | -- |
 | Mistral Large 2     | 128K          | 2K              | 87.9 (74.7)             | <ins>86.1</ins> | <ins>85.5</ins> | 73.3 | 51.5 | *32.6* | *18.7* | -- | -- |
 | Claude 3.5 Sonnet   | 200K          | 4K              | 87.6 (74.4)             | <ins>85.4</ins> | <ins>84.0</ins> | <ins>77.6</ins> | 61.7 | 45.7 | *29.8* | -- | -- |
-| Gemma 3 12B 🆕      | 128K          | 1K              | 87.4 (74.3)             | <ins>74.7</ins> | 61.8 | *39.9* | *27.4* | *16.8* | *7.3* | -- | -- |
+| Gemma 3 12B         | 128K          | 1K              | 87.4 (74.3)             | <ins>74.7</ins> | 61.8 | *39.9* | *27.4* | *16.8* | *7.3* | -- | -- |
 | Gemini 1.5 Flash    | 1M            | <1K             | 84.7 (72.0)             | 68.6 | 61.6 | 51.0 | 44.4 | *35.5* | *28.6* | -- | -- |
 | GPT-4o mini         | 128K          | <1K             | 84.9 (72.2)             | 67.7 | 58.2 | 44.1 | *32.6* | *20.6* | *13.7* | -- | -- |
-| Llama 4 Scout 🆕    | 10M           | 1K              | 81.7 (69.4)             | <ins>72.3<ins> | 61.8 | 50.8 | *35.5* | *26.9* | *21.6* | -- | -- |
-| GPT-4.1 Mini 🆕     | 1M            | <1K             | 80.9 (68.8)             | 66.7 | 62.8 | 58.7 | 51.9 | 46.2 | *38.8* | -- | -- |
-| GPT-4.1 Nano 🆕     | 1M            | <1K             | 80.7 (68.6)             | 60.8 | 48.2 | *36.7* | *28.8* | *19.5* | *9.4* | -- | -- |
+| Llama 4 Scout       | 10M           | 1K              | 81.7 (69.4)             | <ins>72.3<ins> | 61.8 | 50.8 | *35.5* | *26.9* | *21.6* | -- | -- |
+| GPT-4.1 Mini        | 1M            | <1K             | 80.9 (68.8)             | 66.7 | 62.8 | 58.7 | 51.9 | 46.2 | *38.8* | -- | -- |
+| GPT-4.1 Nano        | 1M            | <1K             | 80.7 (68.6)             | 60.8 | 48.2 | *36.7* | *28.8* | *19.5* | *9.4* | -- | -- |
 | Llama 3.1 8B        | 128K          | 1K              | 76.7 (65.2)             | <ins>65.7</ins> | 54.4 | 44.1 | *31.9* | *22.6* | *14.2* | -- | -- |
-| Gemma 3 4B 🆕       | 128K          | <1K              | 73.6 (62.6)             | 50.3 | *35.3* | *16.4* | *7.5* | *2.3* | *0.9* | -- | -- |
+| Gemma 3 4B          | 128K          | <1K              | 73.6 (62.6)             | 50.3 | *35.3* | *16.4* | *7.5* | *2.3* | *0.9* | -- | -- |
 | Gemma 4 31B F16 🆕  | 256K          | 4K              | 79.0 (67.2)             | <ins>77.9</ins> | <ins>74.3</ins> | <ins>68.9</ins> | 61.4 | -- | -- | -- | -- |
 | Qwen 3.6 27B BF16 🆕| 256K          | 2K              | 86.1 (73.2)             | <ins>78.1</ins> | <ins>75.9</ins> | 70.4 | 64.5 | 54.7 | *43.4* | -- | -- |
+| Muse Glimmer 30B F16 🆕| 128K          | 4K              | 93.2 (79.2)             | <ins>90.3</ins> | <ins>88.3</ins> | <ins>81.2</ins> | 67.2 | 54.9 | *40.5* | -- | -- |
 
 This table presents the performance results of selected models on NOLIMA tests. The **base score** represents a model’s accuracy on the task at short contexts (250, 500, and 1K) and serves as a controlled reference to measure performance degradation at longer contexts. 
 The **effective length** is defined as the longest context where a model maintains at least 85% of its base score. Scores above this threshold are <ins>underlined</ins>, while scores dropping below 50% of the base score are *italicized*.
@@ -39,6 +40,7 @@ Longer context evaluations (64K and 128K) use a reduced number of placements (11
 
 #### ✨ Updates:
 
+- [2026-09-16]: Added evaluation results on Muse Glimmer 30B F16.
 - [2026-06-30]: Added evaluation results on Qwen 3.6 27B BF16.
 - [2026-06-15]: Added evaluation results on Gemma 4 31B F16.
 - [2025-07-17]: Added evaluation results on GPT-o3 and GPT-o4 Mini on NoLiMa-Hard in the reasoning models section.
